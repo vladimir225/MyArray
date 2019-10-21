@@ -29,8 +29,9 @@ class MyArray {
   push() {
     for (let i = 0; i < arguments.length; i++) {
       this[this.length] = arguments[i];
+      this._length++;
     }
-    this._length += arguments.length;
+
     return this.length;
   }
 
@@ -140,10 +141,3 @@ class MyArray {
     return this;
   }
 }
-
-const arr = new MyArray(1, 2, 3, 4, 5);
-
-console.log(arr, "length = " + arr.length);
-
-arr.pop();
-console.log(arr, "length = " + arr.length);
