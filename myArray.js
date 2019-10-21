@@ -65,7 +65,7 @@ class MyArray {
 
   map(callback) {
     const newArr = new MyArray();
-    for (i = 0; i < this.length; i++) {
+    for (let i = 0; i < this.length; i++) {
       newArr.push(callback(this[i], i, this));
     }
     return newArr;
